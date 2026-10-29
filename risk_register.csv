@@ -1,0 +1,11 @@
+ID,Threat,Asset,Attack scenario,Likelihood (1-3),Impact (1-3),Score,Priority,Mitigation,Owner,Target
+T1,Account takeover,Citizen/staff accounts,Unauthorized access using compromised credentials,3,3,9,Critical,"Staff MFA; secure recovery; rate limits; anomaly detection",Identity/Security Lead,0-30 days
+T2,Broken access control,Applications/documents,User accesses another citizen's record,3,3,9,Critical,"Server-side ownership checks; deny-by-default; authorization tests",Application Owner,0-30 days
+T3,Injection/unsafe input,Application/database,Untrusted input affects processing,2,3,6,High,"Parameterized queries; validation; secure code review",Development Lead,0-60 days
+T4,Ransomware,Service/data,Malware disrupts or damages service,2,3,6,High,"Patching; segmentation; least privilege; isolated immutable backups",IT Operations,0-60 days
+T5,Storage misconfiguration,Documents/backups,Private records exposed by incorrect permissions,2,3,6,High,"Private-by-default storage; encryption; permission audits",Infrastructure Lead,0-30 days
+T6,Denial of service,Portal/API,Traffic overload makes service unavailable,2,3,6,High,"DDoS/WAF; rate limits; capacity tests; graceful degradation",Operations Lead,0-90 days
+T7,Insider misuse,Citizen records,Staff accesses data without valid purpose,2,3,6,High,"Least privilege; audit alerts; periodic access reviews",Service Owner,0-60 days
+T8,Third-party compromise,Integration credentials,Vendor or integration credential abused,2,3,6,High,"Scoped/rotated credentials; vendor review; monitoring",Vendor Manager,0-90 days
+T9,Supply-chain weakness,CI/CD and production,Unsafe dependency or leaked secret reaches production,2,3,6,High,"Dependency/secret scanning; protected branches; release approvals",DevSecOps Lead,0-60 days
+T10,Phishing,Staff accounts,Staff credentials disclosed through deception,3,2,6,High,"Awareness; phishing-resistant MFA; independent verification",Security Awareness Lead,0-90 days
